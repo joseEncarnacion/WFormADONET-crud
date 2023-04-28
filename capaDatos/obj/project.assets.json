@@ -146,6 +146,22 @@
             "rid": "win"
           }
         }
+      },
+      "capaEntidad/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "System.Data.SqlClient": "4.8.5"
+        },
+        "compile": {
+          "bin/placeholder/capaEntidad.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/capaEntidad.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
       }
     }
   },
@@ -462,11 +478,17 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "capaEntidad/1.0.0": {
+      "type": "project",
+      "path": "../capaEntidad/capaEntidad.csproj",
+      "msbuildProject": "../capaEntidad/capaEntidad.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
-      "System.Data.SqlClient >= 4.8.5"
+      "System.Data.SqlClient >= 4.8.5",
+      "capaEntidad >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -495,7 +517,11 @@
       "frameworks": {
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Usuario\\Pictures\\PROYECTOS\\BackEnd\\ASP NET portafolio\\WFormADONET-crud\\capaEntidad\\capaEntidad.csproj": {
+              "projectPath": "C:\\Users\\Usuario\\Pictures\\PROYECTOS\\BackEnd\\ASP NET portafolio\\WFormADONET-crud\\capaEntidad\\capaEntidad.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

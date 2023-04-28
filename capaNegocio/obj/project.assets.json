@@ -146,6 +146,39 @@
             "rid": "win"
           }
         }
+      },
+      "capaDatos/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "System.Data.SqlClient": "4.8.5",
+          "capaEntidad": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/capaDatos.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/capaDatos.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
+      },
+      "capaEntidad/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "System.Data.SqlClient": "4.8.5"
+        },
+        "compile": {
+          "bin/placeholder/capaEntidad.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/capaEntidad.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
       }
     }
   },
@@ -462,11 +495,23 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "capaDatos/1.0.0": {
+      "type": "project",
+      "path": "../capaDatos/capaDatos.csproj",
+      "msbuildProject": "../capaDatos/capaDatos.csproj"
+    },
+    "capaEntidad/1.0.0": {
+      "type": "project",
+      "path": "../capaEntidad/capaEntidad.csproj",
+      "msbuildProject": "../capaEntidad/capaEntidad.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
-      "System.Data.SqlClient >= 4.8.5"
+      "System.Data.SqlClient >= 4.8.5",
+      "capaDatos >= 1.0.0",
+      "capaEntidad >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -495,7 +540,14 @@
       "frameworks": {
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Usuario\\Pictures\\PROYECTOS\\BackEnd\\ASP NET portafolio\\WFormADONET-crud\\capaDatos\\capaDatos.csproj": {
+              "projectPath": "C:\\Users\\Usuario\\Pictures\\PROYECTOS\\BackEnd\\ASP NET portafolio\\WFormADONET-crud\\capaDatos\\capaDatos.csproj"
+            },
+            "C:\\Users\\Usuario\\Pictures\\PROYECTOS\\BackEnd\\ASP NET portafolio\\WFormADONET-crud\\capaEntidad\\capaEntidad.csproj": {
+              "projectPath": "C:\\Users\\Usuario\\Pictures\\PROYECTOS\\BackEnd\\ASP NET portafolio\\WFormADONET-crud\\capaEntidad\\capaEntidad.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
