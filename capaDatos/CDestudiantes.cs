@@ -89,6 +89,37 @@ namespace capaDatos
             }
             return Rpta;
         }
+        public string actualizar_es(int nCodigo)
+        {
+            try
+            {
+                    SqlCommand comando = new SqlCommand('sp_insertar', conn);
+                    commando.CommandType = CommandType.StoredProcedure();
+                    comando.Parameters.AddWithValue("@nom", oEs.Nombre);
+                    comando.Parameters.AddWithValue("@ape", oEs.Apellido);
+                    comando.Parameters.AddWithValue("@mail", oEs.Correo);
+
+                    SqlCommand comando = new SqlCommand('sp_actualizar', conn);
+                    commando.CommandType = CommandType.StoredProcedure();
+                    comando.Parameters.AddWithValue("@nom", oEs.Nombre);
+                    comando.Parameters.AddWithValue("@ape", oEs.Apellido);
+                    comando.Parameters.AddWithValue("@mail", oEs.Correo);
+
+                if (conn.State == ConnectionState.Open) conn.Close;
+                conn.Open();
+                //Esta linea devuelve un mensaje en caso de que una o mas lineas son afectadas durantes la ejecución.
+                Rpta = comando.ExecuteNonQuery() >= 1 ? "OK" : "No se pudo ingresar el registro";
+            catch (Exception ex)
+            {
+                Rpta = ex.Message;
+                throw ex;
+            }
+            finally
+            {
+                if (conn.State == ConnectionState.Open) conn.Close;
+            }
+            return Rpta;
+        }
         public string eliminar_es(int nCodigo)
         {
             try
